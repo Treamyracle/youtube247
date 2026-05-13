@@ -1,0 +1,11 @@
+torch-directml
+audiocraft
+librosa==0.10.1
+opencv-python==4.9.0.80
+numpy==1.26.4
+python-dotenv==1.0.1
+loguru==0.7.2
+requests==2.31.0
+ffmpeg-python==0.2.0
+psutil==5.9.8
+torchaudio
