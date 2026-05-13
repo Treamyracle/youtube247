@@ -34,6 +34,6 @@ FALLBACK_MUSIC_DIR = ASSETS_DIR / "music"
 FALLBACK_VIDEO_DIR = ASSETS_DIR / "videos"
 
 # Visual Settings
-FONT_PATH = "C:/Windows/Fonts/arial.ttf"  # Update for Linux: "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 TEXT_COLOR = "white"
 TEXT_SIZE = 48

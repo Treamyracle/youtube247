@@ -1,5 +1,5 @@
 import torch
-import torch_directml
+
 import random
 import time
 from pathlib import Path
@@ -12,13 +12,13 @@ from config import OUTPUT_DIR, FALLBACK_MUSIC_DIR, MUSIC_PROMPT, SONG_DURATION
 logger.add("logs/generator.log", rotation="10 MB")
 
 class MusicGenerator:
-    def __init__(self, model_name='facebook/musicgen-medium'):
+    def __init__(self, model_name='facebook/musicgen-small'):
         """
         Initializes the Local MusicGen model using DirectML for AMD GPUs.
         """
         try:
             logger.info(f"Initializing Local MusicGen ({model_name}) on AMD GPU...")
-            self.device = torch_directml.device()
+            self.device = "cuda" if torch.cuda.is_available() else "cpu"
             self.model = MusicGen.get_pretrained(model_name)
             self.model.to(self.device)
             logger.info("Local MusicGen initialized successfully.")

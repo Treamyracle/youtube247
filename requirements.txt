@@ -1,4 +1,4 @@
-torch-directml
+
 audiocraft
 librosa==0.10.1
 opencv-python==4.9.0.80
